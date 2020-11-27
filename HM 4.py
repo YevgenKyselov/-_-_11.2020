@@ -64,10 +64,8 @@
 # Генерирование через range или другие "фишки" я засчитывать не буду ))
 my_string = '0123456789'
 my_list = []
-my_string2 = my_string
-
 for symb_1 in my_string:
-    for symb_2 in my_string2:
+    for symb_2 in my_string:
         new_number = int(symb_1+symb_2)
         my_list.append(new_number)
 print(my_list)
