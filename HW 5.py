@@ -87,3 +87,26 @@ index_1 = my_str.find(l_limit)
 index_2 = my_str.rfind(r_limit)
 sub_str = my_str[index_1+1:index_2]
 print(sub_str)
+# 9. Дана строка my_str в которой символы МОГУТ повторяться и два символа l_limit, r_limit,
+# которые точно находятся в этой строке. Причем l_limit левее чем r_limit.
+# В переменную sub_str поместить НАИБОЛЬШУЮ часть строки между этими символами.
+# my_str = "My long string", l_limit = "o", r_limit = "g" -> sub_str = "ng strin".
+my_str = "My long string"
+l_limit = "o"
+r_limit = "g"
+index_1 = my_str.find(l_limit)
+index_2 = my_str.rfind(r_limit)
+sub_str = my_str[index_1+1:index_2]
+print(sub_str)
+# 10. Дан список чисел. Определите, сколько в этом списке элементов,
+# которые больше суммы двух своих соседей (слева и справа), и НАПЕЧАТАЙТЕ КОЛИЧЕСТВО таких элементов.
+# Крайние элементы списка никогда не учитываются, поскольку у них недостаточно соседей.
+# Для списка [2,4,1,5,3,9,0,7] ответом будет 3 потому что 4 > 2+1, 5 > 1+3, 9>3+0.
+my_list = [2, 4, 1, 5, 3, 9, 0, 7]
+index = 0
+count = 0
+for symbol in my_list[1:-1]:
+    if symbol > my_list[index] + my_list[index+2]:
+        count += 1
+    continue
+print(count)
