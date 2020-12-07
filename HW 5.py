@@ -54,3 +54,25 @@
 # 7. Дана строка my_str. Разделите эту строку на пары из двух символов и поместите эти пары в список.
 # Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен
 # быть заменен подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_']
+my_str = 'abjhjhlllll'
+my_list = []
+i = 0
+j = 1
+if len(my_str) % 2 == 0:
+    for symbol in my_str:
+        try:
+            new_str = my_str[i] + my_str[j]
+            i += 2
+            j += 2
+            my_list.append(new_str)
+        except: IndexError
+else:
+    my_str += '_'
+    for symbol in my_str:
+       try:
+            new_str = my_str[i] + my_str[j]
+            i += 2
+            j += 2
+            my_list.append(new_str)
+       except: IndexError
+print(my_list)
