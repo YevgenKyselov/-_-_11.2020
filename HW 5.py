@@ -54,7 +54,7 @@
 # 7. Дана строка my_str. Разделите эту строку на пары из двух символов и поместите эти пары в список.
 # Если строка содержит нечетное количество символов, пропущенный второй символ последней пары должен
 # быть заменен подчеркиванием ('_'). Примеры: 'abcd' -> ['ab', 'cd'], 'abcde' -> ['ab', 'cd', e_']
-my_str = 'abjhjhlllll'
+my_str = 'ab2323232'
 my_list = []
 i = 0
 j = 1
@@ -76,3 +76,14 @@ else:
             my_list.append(new_str)
        except: IndexError
 print(my_list)
+# 8. Дана строка my_str в которой символы не повторяются и два символа l_limit, r_limit,
+# которые точно находятся в этой строке. Причем l_limit левее чем r_limit.
+# В переменную sub_str поместить часть строки между этими символами.
+# my_str = "My_long str", l_limit = "o", r_limit = "t" -> sub_str = "ng s"
+my_str = "My_long str"
+l_limit = "o"
+r_limit = "t"
+index_1 = my_str.find(l_limit)
+index_2 = my_str.rfind(r_limit)
+sub_str = my_str[index_1+1:index_2]
+print(sub_str)
