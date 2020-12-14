@@ -76,4 +76,3 @@ my_values_1, my_values_2 = set(my_list), set(my_list_2)
 values_res = my_values_1.intersection(my_values_2)
 list_res = list(values_res)
 print(list_res)
-!
