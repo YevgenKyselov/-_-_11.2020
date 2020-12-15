@@ -46,11 +46,12 @@ print(str_list)
 ###############################
 # 5. Дана строка my_str. Создать список в который поместить те символы из my_str,
 # которые встречаются в строке только один раз.
-my_str = 'abcdefaghjt'
-my_set = set(my_str)
-uniq_list = [item for item in my_set]
-print(uniq_list, len(uniq_list))
-print(len(my_str))
+my_str = 'abbbbbb'
+uniq_list = []
+for symbol in my_str:
+    if not my_str.count(symbol) > 1:
+        uniq_list.append(symbol)
+print(uniq_list)
 ################################
 # 6. Даны две строки. Создать список в который поместить те символы,
 # которые есть в обеих строках хотя бы раз.
